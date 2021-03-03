@@ -1,0 +1,21 @@
+name: Make Latex
+
+on: push
+
+jobs:
+  make-latex:
+    name: Make Latex
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Make
+        run: make
+      - uses: actions/upload-artifact@v2
+        with:
+          name: swamidass_cv.pdf
+          path: swamidass_cv.pdf
+        
+    
