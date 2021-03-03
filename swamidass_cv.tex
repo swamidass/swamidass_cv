@@ -1,0 +1,368 @@
+% LaTeX resume using res.cls
+%\documentclass{article}
+\documentclass[10pt]{article} 
+\usepackage{url}
+\usepackage{tweaklist}
+\usepackage{etaremune}
+\usepackage[cm]{fullpage}
+\usepackage[resetlabels]{multibib}
+\usepackage[ManyBibs,TextAligned]{currvita}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{microtype}
+\usepackage{fnpct}
+\usepackage[symbol,perpage,para,bottom]{footmisc}
+%\hyphenpenalty=100000
+\clubpenalty = 10000 
+\widowpenalty = 10000
+
+\usepackage{charter}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+
+
+
+\newenvironment{sublist}{%
+	\begin{list}{}{%
+		\setlength{\itemsep}{0em}\setlength{\parsep}{0em}%
+		\setlength{\topsep}{0em}\setlength{\parskip}{0em}%
+	}%
+}%
+{ \end{list} }
+
+% Better for lists with more than 2 items and/or long descriptions
+\newenvironment{subbulletlist}{%
+	\begin{list}{\labelitemii}{%
+		\setlength{\topsep}{\itemsep}\setlength{\parskip}{\parsep}%
+	}%
+}%
+{ \end{list} }
+
+\setlength{\parskip}{0em}
+
+\newcites{journal}{foo}
+\newcites{conference}{foo}
+\newcites{media}{foo}
+\bibliographystylejournal{unsrt_swami}
+\bibliographystylemedia{unsrt_swami}
+\bibliographystyleconference{unsrt_swami}
+
+%\setlength{\labelsep}{.5em}
+
+
+% Better for lists with 1-2 items and short descriptions
+
+\begin{document}
+
+%\name{\textbf{S. Joshua Swamidass}}
+%\address{\url{http://pathology.wustl.edu/~swamidass/}}
+\settowidth{\cvlabelwidth}{% 
+\cvlabelfont 2009-2009% 
+}% 
+\begin{cv}{\huge \it \bfseries S. Joshua Swamidass}
+\vskip3pt
+\hrule\hrule
+\vskip3pt
+\hfill \url{http://swami.wustl.edu/}
+
+{
+\setlength{\cvlabelsep}{0mm}
+\setlength{\cvlabelwidth}{0mm}
+\begin{cvlist}{Research Interests}
+\item Statistical machine learning and decision theory applied to chemical biology and medicine, with special interest in drug metabolism, drug discovery, and translational research.
+\end{cvlist}
+}
+
+\begin{cvlist}{Appointments}
+\item[2017-\emph{now}] Faculty Lead \hfill Washington University in Saint Louis\\  \hspace*{\fill} Translational Bioinformatics\\  \hspace*{\fill} Institute for Informatics
+%\item[2018-\emph{now}] Associate Professor \hfill Washington University in Saint Louis\\  \hspace*{\fill} Department of Immunology and Pathology\\  \hspace*{\fill} Division of Laboratory and Genomic 
+Medicine
+\item[2018-\emph{now}] Associate Professor \hfill Washington University in Saint Louis\\  \hspace*{\fill} Department of Immunology and Pathology\\  \hspace*{\fill} Division of Laboratory and Genomic Medicine
+\item[2011-2018] Assistant Professor \hfill Washington University in Saint Louis\\  \hspace*{\fill} Department of Immunology and Pathology\\  \hspace*{\fill} Division of Laboratory and Genomic 
+Medicine
+\item[2010-2011] Instructor \hfill Washington University in Saint Louis\\  \hspace*{\fill} Department of Immunology and Pathology\\  \hspace*{\fill} Division of Laboratory and Genomic 
+Medicine
+\item[2011-2012] Visiting Scientist \hfill Pfizer  Incorporated \\  \hspace*{\fill} Indications Discovery Unit
+\item[2009-2012] Visiting Scientist \hfill Broad Institute of Harvard and MIT\\  \hspace*{\fill} Chemical Biology Program
+\item[2009-2010] Laboratory and Genomic Medicine Resident \hfill Washington University in Saint Louis\\  \hspace*{\fill} Department of Immunology and Pathology \\ \hspace*{\fill} Division of Laboratory and Genomic Medicine
+
+%\item[2009-2009] Post-Doctoral Fellow \hfill Washington University in Saint Louis\\ Department of Immunology and Pathology
+\end{cvlist}
+
+\begin{cvlist}{Education}
+\item[2000-2009] Medical Doctorate (M.D.)  \hfill University of California, Irvine \\ Graduation with Distinction in Research
+\item[2002-2007] Philosophical Doctorate (Ph.D.) \hfill University of California, Irvine \\ Information and Computer Sciences \\ Specialization in Informatics in Biology and Medicine
+\item[2002-2006] Master of Sciences (M.S.) \hfill University of California, Irvine \\ Information and Computer Sciences 
+\item[1996-2000] Bachelor of Sciences (B.S.) \hfill University of California, Irvine \\ Major in Biological Sciences, \emph{Cum Laude}  \\Minor in Information and Computer Sciences
+\end{cvlist}
+
+
+
+\begin{cvlist}{Funding}
+%\item[2011-\emph{now}] Mining PubChem to Reposition Drugs \hfill Glaxo-Smith-Kline \\
+ %\hspace*{\fill} Computational Biology
+%\item[2011-\emph{now}] Inferring Targets and Pathways from Phenotypic Screens \hfill Pfizer, Inc. \\
+% \hspace*{\fill} Indications Discovery Unit
+
+
+
+\item[2018-2019]  A Deep Learning Model to Improve  \hspace*{\fill}  National Institute of Diabetes and Digestive and Kidney Diseases \\*
+Pathologist Interpretation of Donor Kidney Biopsies  \hspace*{\fill}  	R41	DK120253-01 (PlatformSTL)
+
+\item[2019-2023]  Early Life Adversity, Biological Embedding, \hspace*{\fill} National Institute of Mental Health \\*  
+   and Risk for Developmental Precursors of Mental Disorders    \hspace*{\fill}  R01 MH113883-01A1
+
+
+\item[2019-2019]  Peaceful Science and the Genealogical Adam
+    \hspace*{\fill} The John Templeton Foundation 
+
+
+\item[2016-2020]  Computationally Modeling the Impact of Ontogeny on Drug Metabolic Fate
+    \hspace*{\fill} National Library of Medicine \\*    \hspace*{\fill}  R01 LM012482-01
+\item[2016-2020]  Data and Tools for Modeling Metabolism and Reactivity
+    \hspace*{\fill} National Library of Medicine \\*    \hspace*{\fill} R01 LM012222-01
+\item[2016-2018]  Inquiry Into Common Ground
+    \hspace*{\fill} The STEAM Project \\*    \hspace*{\fill}  The John Templeton Foundation
+\item[2011-2014]  Computational Biology   \hspace*{\fill} Glaxo-Smith-Kline
+\item[2011-2012]  Indications Discovery Unit   \hspace*{\fill} Pfizer  Incorporated
+\item[2009-2010] Physician Scientist Training Program \hfill Washington University in Saint Louis \\
+ \hspace*{\fill} Department of Pathology and Immunology
+\item[2000-2009] M.D. Ph.D. Program  \hfill University of California, Irvine \\
+ \hspace*{\fill}  Funded by National Institute of Health
+\item[2005-2007] Biomedical Informatics Training Program  \hfill University of California, Irvine \\
+ \hspace*{\fill}  Funded by National Institute of Health
+\item[2001-2004] Harvey Fellowship \hfill The Mustard Seed Foundation 
+\item[1996-2000] Regents Scholarship \hfill   University of California Regents
+\end{cvlist}
+
+\begin{cvlist}{Service}
+\item[2018-\emph{now}] Research Information Systems (RIS) IT Governance \hfill Washington University in Saint Louis
+
+\item[2017-\emph{now}] NIH Review Committee Member  (BLIRC) \hfill National Library of Medicine
+\item[2016-\emph{now}] Associate Editor \hfill BMC Medical Informatics and Decision Making
+\item[2016-\emph{now}] Cataloguing \& Benchmarking Computational Methods \hfill Faculty of 1000 Prime
+\item[2015-2017] Science Advisor \hfill AAAS Science for Seminaries Program\\  \hspace*{\fill} Concordia Seminary in St Louis
+\item[2016-2017] NIH Review Committee Member  (XNDA) \hfill National Institute of General Medical Sciences
+\item[2015-2016] Science Advisor, Concordia Seminary \hfill  American Association for the Advancement of Science \\  \hspace*{\fill} Science for Seminaries Program
+\item[2015-2016] NIH Review Committee Member (ZLM1 ZH-C) \hfill National Library of Medicine 
+%\item[2009-2009] Post-Doctoral Fellow \hfill Washington University in Saint Louis\\ Department of Immunology and Pathology
+\end{cvlist}
+
+
+\renewenvironment{thebibliography}[1]{
+\setlength{\topsep}{0em}
+\setlength{\labelsep}{.5em}
+\begin{etaremune}{
+\setlength{\itemsep}{0.5em}}
+}{\end{etaremune}}
+\renewcommand{\bibitem}[1]{\item}
+
+%\settowidth{\cvlabelwidth}{\cvlabelfont XXXX}% 
+\setlength{\cvlabelsep}{0mm}
+\setlength{\cvlabelwidth}{0mm}
+\renewcommand{\labelitemi}{}
+
+%\vspace{1em}
+\begin{cvlist}{Publications}
+\item {\begin{itemize}\item{\bf Swamidass, S. J.} \emph{Chemical Databases, Datastructures, and Algorithms.} Ph.D. dissertation, University of California, Irvine, 2007. \end{itemize}}
+\item {\bf Refereed Journal Articles}
+%sidd's paper
+%manual review
+%germline neo-antigent
+
+\nocitejournal{flynn2020xenonet}
+\nocitejournal{dang2020metabolic}
+\nocitejournal{barnette2020dual}
+\nocitejournal{lents2019end}
+\nocitejournal{barnell2019standard}
+\nocitejournal{lowe2019precision}
+\nocitejournal{ching2019opportunities}
+\nocitejournal{barnette2019lamisil}
+\nocitejournal{matlock2019deep}
+\nocitejournal{davis2019cyp2c19}
+
+\nocitejournal{barnette2019comprehensive}
+\nocitejournal{matlock2019time}
+\nocitejournal{sun2019247}
+\nocitejournal{hundal2019accounting}
+\nocitejournal{barnell2018standard}
+\nocitejournal{ainscough2018deep}
+\nocitejournal{barnette2018tbf}
+\nocitejournal{matlock2018modeling}
+\nocitejournal{marsh2018glom}
+\nocitejournal{deep2018greene}
+\nocitejournal{swamidass2018genelaogical}
+\nocitejournal{dang2018ndealk}
+\nocitejournal{matlock2018wave}
+\nocitejournal{ruan2017beesem}
+\nocitejournal{dang2017casa1}
+\nocitejournal{hughes2017quinone}
+\nocitejournal{ParsSNP}
+\nocitejournal{pan2016inhibition}
+\nocitejournal{hughes2016react}
+\nocitejournal{malaria2016}
+\nocitejournal{le2016simple}
+\nocitejournal{lusci2015accurate}
+\nocitejournal{kumar2015statistically}
+\nocitejournal{hughes2015modeling}
+\nocitejournal{zaretzki2015improved}
+\nocitejournal{li2015reposition}
+\nocitejournal{hughes2015react}
+\nocitejournal{zaretzki2015extending}
+\nocitejournal{diamond2015subcellular}
+\nocitejournal{swamidass2015securely}
+\nocitejournal{matlock2015xenosite}
+\nocitejournal{ekins2014bigger}
+\nocitejournal{pinet}
+\nocitejournal{sharing}
+\nocitejournal{swamidass2013computational}
+\nocitejournal{xenosite}
+\nocitejournal{econ-opt}
+\nocitejournal{pmid23918250}
+\nocitejournal{miss}
+\nocitejournal{zaretzki2013rs}
+\nocitejournal{sloutsky2013accounting}
+\nocitejournal{miss}
+\nocitejournal{calhoun2012automatically}
+\nocitejournal{cop}
+\nocitejournal{pgraphsig}
+\nocitejournal{reposition}
+\nocitejournal{dop}
+\nocitejournal{economics}
+\nocitejournal{croc}
+\nocitejournal{profile}
+\nocitejournal{pmid19391629}
+\nocitejournal{pmid18522387}
+\nocitejournal{pmid17967006}
+\nocitejournal{pmid17599932}
+\nocitejournal{pmid17444629}
+\nocitejournal{pmid17338509}
+\nocitejournal{pmid17326616}
+\nocitejournal{pmid17048398}
+\nocitejournal{pmid16492739}
+\nocitejournal{pmid16174682}
+\nocitejournal{pmid16157471}
+\nocitejournal{pmid15961479}
+\item{\bibliographyjournal{swamidass} }
+%\vspace{1em}
+
+\item {\bf Editorials and Interviews}
+
+\nocitemedia{swamidass2015education}
+\nocitemedia{kalgutkar2015tracking}
+\nocitemedia{zeliadt2014cryptographic}
+\nocitemedia{swamidass2012rubio}
+\nocitemedia{mediaWDRC}
+\nocitemedia{boldrin2011fda}
+\item{\bibliographymedia{swamidass} }
+
+
+
+\item {\bf Conference Talks}
+
+\nociteconference{conf2016mdo}
+\nociteconference{confISSX2015}
+\nociteconference{confACS2015-2}
+\nociteconference{confASPET2015}
+\nociteconference{confACS2015}
+\nociteconference{confACS2015tyler}
+\nociteconference{confCUP2014}
+\nociteconference{confISSX2014}
+\nociteconference{confP450region}
+%\nociteconference{confCANS}
+\nociteconference{confSecurity}
+\nociteconference{confP450}
+\nociteconference{confsecure}
+\nociteconference{confPWASwrc}
+\nociteconference{confPWAS}
+\nociteconference{confRepurp}
+\nociteconference{confPoly}
+\nociteconference{confEcon}
+\nociteconference{confPgraphsig}
+\nociteconference{confPubChem}
+\nociteconference{confUAvhts}
+\nociteconference{baldi2011bridging}
+\nociteconference{confMCD}
+\nociteconference{confPowerlaw}
+\nociteconference{confChemDb}
+\nociteconference{confP53}
+\nociteconference{confChemKernel}
+\item{\bibliographyconference{swamidass} }
+
+
+\pagebreak[2]
+\item {\bf Patents} 
+\item{\begin{etaremune}
+\setlength{\topsep}{0em}\setlength{\labelsep}{.5em}
+\item {\bf Swamidass, S. J.} and P. F. Baldi. Method for rapidly and accurately searching chemical compounds. U.S. Patent Application 60/970,213, 2007. 
+\item Baldi, P. F. and S. Tsai. Method of treatment for Mycobacterium tuberculosis. W.I P.O. Patent WO/2007/092930, 2007.\footnote{Work noted in this \emph{curriculum vitae} led to this patent.}
+\end{etaremune}}
+\pagebreak[2]
+\item {\bf Book Chapter } 
+\item{\begin{etaremune}
+\setlength{\topsep}{0em}\setlength{\labelsep}{.5em}
+\item {\bf Swamidass, S. J.} and  P. F.  Baldi. Statistical distribution of chemical fingerprints, volume 3849. Lecture Notes in Computer Science, 2006. 
+\end{etaremune}}
+\end{cvlist}
+
+\settowidth{\cvlabelwidth}{\cvlabelfont 2009-2009}% 
+\setlength{\cvlabelsep}{1em}
+
+\pagebreak[2]
+
+\begin{cvlist}{ Invited Talks}
+\item \emph{A subset of recent examples included below...}
+\item[Oct, 2018] McDonnald Lecture, World Preclinical Congress, Hong Kong University, HK
+
+\item[Jun, 2018] Keynote, World Preclinical Congress, Boston, MA
+\item[Apr, 2018] Keynote, International Biocuration Conference, Fudan University, Shanghai, China
+\item[Jan, 2018] Monsanto, Saint Louis, MO
+\item[Nov, 2017] Pacific Northwest National Laboratory, Richland, WA
+\item[Nov, 2017] Keynote, Monsanto Graduate Fellows Symposium, Saint Louis, MO
+\item[Oct, 2017] Keynote, StampedeCon AI Summit, Saint Louis, MO
+\item[Mar, 2017] Department of Chemistry, Stanford, Palo Alto CA
+\item[Mar, 2017] Gladstone Institutes, UC San Fransisco, San Fransisco CA
+\item[Sep, 2016] Department of Biomedical Informatics, University of Pittsburg, Pittsburg PA
+\item[Jul, 2016] Science for Seminaries Retreat, AAAS, Portland OR
+\item[May, 2016] Department of Pharmacology, University of Washington, Seattle WA
+\item[May, 2016] CADD Forum, Janssen Research \& Development, Newark NJ
+\item[May, 2016] Department of Biochemistry and Molecular Biology, University of Arkansas for Medical Science, Little Rock AR
+\item[May, 2016] National Center for Toxicological Research, FDA, Little Rock AR
+\item[Mar, 2016] Division of Gastroenterology, Cedars-Sinai Medical Center, Los Angeles CA
+\item[Oct, 2015] Science Seminar Series, Wheaton University, Wheaton IL
+\item[Oct, 2015] Medical School,  University of Chicago, Chicago IL
+\item[Mar, 2015] Department of Biomedical Engineering, Oregon Health Science University, Portland OR
+\end{cvlist}
+
+
+\begin{cvlist}{Teaching }
+\item[2016-2017] Lecturer \hfill   The Digital Society
+\item[2011-2015] Lecturer \hfill Laboratory and Genomic Medicine \\ Genomic Statistics  \hfill Genomics Rotation
+\item[2011] Lecturer \hfill Biomedical Engineering 572\\ Classification \hfill Biological Neural Computation
+\item[2010] Lecturer \hfill Biology 5495\\ Kernel Methods \hfill Computational Molecular Biology
+\item[2003-2005] Lecturer \hfill Developmental Biology 203A \\ Sequence Analysis and Chemical Informatics \hfill Biology Basic Training
+\item[2005] Lecturer  \hfill Information and Computer Sciences 173 \\ Biologic and 
+Artificial Neural Networks \hfill Introduction to Artificial Intelligence
+\item[2002] Lecturer and Tutor \hfill Medical Biochemistry 
+\item[1999] Teaching Assistant  \hfill Undergraduate General Chemistry 
+\end{cvlist}
+
+
+
+\iffalse
+\begin{cvlist}{Technical Skills }
+\item Designing and applying algorithms in statistical machine learning, data mining, and artiﬁcial intelligence, including neural networks, support vector machines, hidden-markov models, bayesian networks, bayesian inference, and multivariate statistics. Proficient in Python, C, C++, Swig, 
+SciPy, SQL, Java, and several additional languages. 
+\end{cvlist}
+\fi
+
+\end{cv}
+\end{document}
+
+
+
+
+
+
+
